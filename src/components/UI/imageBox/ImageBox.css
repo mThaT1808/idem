@@ -1,0 +1,132 @@
+/* Utility classes  */
+
+.slideInLeft {
+    animation: slideInLeft 1s ease-in-out;
+}
+.slideInLeft1 {
+    animation: slideInLeft1 1s ease-in-out;
+}
+
+.slideInRight {
+    animation: slideInRight 1s ease-in-out;
+}
+.slideInRight1 {
+    animation: slideInRight1 1s ease-in-out;
+}
+
+/* animations  */
+@keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+@keyframes slideInLeft1 {
+    from {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+@keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+@keyframes slideInRight1 {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+
+
+.imageBox {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.image {
+    clip-path: circle(306px at 55% 40%);
+    min-width: 768px;
+    min-height: auto;
+    transform:rotateY(180deg);
+    position: relative;
+    right: 0;
+}
+.imageName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    font-style: 24px;
+    font-weight: bolder;
+    height: 54px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 50vh;
+    position: absolute;
+    bottom: 50px; left: 150px;
+}
+.imagePost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    font-style: 24px;
+    font-weight: bolder;
+    height: 54px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 50vh;
+    position: absolute;
+    top: 50px; right: 150px;
+}
+
+@media (max-width: 1440px) {
+    .imageBox {
+        overflow: hidden;
+        width: 345px;
+    }
+    .image {
+        left: -220px;
+        clip-path: circle(306px at 30% 50%);
+    }
+}
+@media (max-width: 768px) {
+    .imageBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: hidden;
+        width: 100vw;
+    }
+    .image {
+        width: 100vw;
+        position: static;
+        clip-path: circle(270px at 50% 60%);
+        scale: 1;
+    }
+    .imageName {
+        left: 50px;
+    }
+    .imagePost {
+        right: 50px;
+        top: 70px;
+    }
+}

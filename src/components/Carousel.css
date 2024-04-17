@@ -1,0 +1,73 @@
+
+.carousel {
+    height: 400px;
+    width: 100vw;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content:center;
+    overflow: hidden;
+}
+.carouselBox {
+    width: 1110px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.description {
+    font-size: 72px;
+    font-weight: bolder;
+}
+.textBox {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.ButtonsBox {
+    display: flex;
+    height: 44px;
+    width: 88px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+@media (max-width: 1440px) {
+    .carouselBox {
+        width: 690px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .textBox {
+        z-index: 10;
+        height: 400px;
+        width: 345px;
+    }
+}
+@media (max-width: 768px) {
+    .carousel {
+        height: fit-content;
+    }
+    .carouselBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .textBox {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        height: fit-content;
+        width: 90vw;
+    }
+    .description {
+        font-size:17vw;
+    }
+    .ButtonsBox {
+        display: none;
+    }
+}
+
+
+

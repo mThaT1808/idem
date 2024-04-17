@@ -1,0 +1,70 @@
+.vacCard {
+    margin-inline: 15px;
+    min-width: 350px;
+    height: 480px;
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 1.5s;
+}
+.post {
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: fit-content;
+    background-color: white;
+    border-radius: 30px;
+}
+.vacancyImg {
+    z-index: 0;
+    height: 400px;
+    width: auto;
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    transition: 1.5s;
+}
+.vacDescription {
+    display: none;
+    font-weight: bold;
+    margin: 15px;
+    transition: 1.5s;
+}
+.vacCard:hover {
+    background-color: #FFDF31;
+    .vacDescription{
+        display: block;
+    } 
+    .vacancyImg{
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    .vacCard{
+        min-width: 300px;
+        height: 410px;
+    }
+    .vacancyImg {
+        height: 350px;
+    }
+    
+}
+@media (max-width: 768px) {
+    .vacCard{
+        min-width: 252px;
+        height: 344px;
+    }
+    .vacancyImg {
+        height: 250px;
+    }
+}
