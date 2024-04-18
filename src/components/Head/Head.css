@@ -1,6 +1,10 @@
 :root {
     --main-height: 47px;
 }
+.headLeft {
+    display: flex;
+    align-items: center;
+}
 .head {
     display: flex;
     width: 1110px;
@@ -11,7 +15,12 @@
     justify-content: space-between;
 }
 .logo {
-    height: 30px;
+    content: '';
+    background: url("/src/media/images/logo1.png");
+    background-size: contain;
+    width: 30px;
+    height: 38px;
+    display: inline-block;
 }
 .hBtn {
     font-size: 18px;

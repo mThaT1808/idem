@@ -1,9 +1,8 @@
 import './Vacancies.css';
-import tovaroved from '../media/images/TOVAROVED.png';
-import right from "../media/images/right.png";
-import left from "../media/images/left.png";
-import MyButton from './UI/MyButton';
-import VacancyCard from './UI/vacancyCard/VacancyCard';
+import right from "../../media/images/right.png";
+import left from "../../media/images/left.png";
+import MyButton from '../UI/MyButton/MyButton';
+import VacancyCard from '../UI/vacancyCard/VacancyCard';
 
 function Vacancies (props) {
 
@@ -15,9 +14,9 @@ function Vacancies (props) {
                     вакансии в гросс маркете
                 </div>
                 <div className="vacButtonsBox">
-                    <MyButton><img src={left} alt="<-" style={{height: "30px"}}/></MyButton>
+                    <MyButton className="button-left"></MyButton>
                     <div style={{fontSize: '40px', color: 'gray'}}>|</div>
-                    <MyButton><img src={right} alt="->" style={{height: "30px"}}/></MyButton>
+                    <MyButton className="button-right"></MyButton>
                 </div>
             </div>
             <div className='vacScroller'>

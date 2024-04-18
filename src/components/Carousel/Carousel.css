@@ -12,6 +12,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 2fr 3fr;
+    overflow: visible;
 }
 .description {
     font-size: 72px;
@@ -31,6 +32,28 @@
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
+}
+.button-left::after {
+    content: '';
+    background: url("/src/media/images/left.png");
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.button-left {
+    background-color: white !important;
+}
+.button-right::after {
+    content: '';
+    background: url("/src/media/images/right.png");
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.button-right {
+    background-color: white !important;
 }
 
 @media (max-width: 1440px) {

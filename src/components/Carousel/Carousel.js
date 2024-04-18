@@ -1,38 +1,21 @@
 import React, { useState } from "react";
 
 import './Carousel.css'
-import MyButton from "./UI/MyButton";
-import right from "../media/images/right.png";
-import left from "../media/images/left.png";
-import ImageBox from "./UI/imageBox/ImageBox.js";
+import MyButton from "../UI/MyButton/MyButton";
+import ImageBox from "../UI/imageBox/ImageBox.js";
 
 
 
 function Carousel(props) {
     const [direction, setDirection] = useState('')
   function showNext() {
-    switch(props.currentIndex) {
-      case (props.carouselImages.length-1):
-        props.updateIndex(0);
-        break;
-      default:
-        props.updateIndex(props.currentIndex+1);
-        break;
-    } 
-    direction === 'slideInLeft'?setDirection('slideInLeft1'):setDirection('slideInLeft')
+    props.updateIndex(props.currentIndex === props.carouselImages.length-1?0:props.currentIndex+1)
+    setDirection(direction === 'slideInLeft'?'slideInLeft1':'slideInLeft')
   }
 
   function showPrevious() {
-    switch(props.currentIndex) {
-     case (0):
-        props.updateIndex(props.carouselImages.length-1);
-        break;
-      default:
-        props.updateIndex(props.currentIndex-1);
-        break;
-    }
-    direction === 'slideInRight'?setDirection('slideInRight1'):setDirection('slideInRight')
-    
+    props.updateIndex(props.currentIndex === 0? props.carouselImages.length-1: props.currentIndex-1)
+    setDirection(direction === 'slideInRight'?'slideInRight1':'slideInRight')  
   }
 
   const [isTouchMove, setTouchMove] = useState(0);
@@ -65,9 +48,9 @@ function Carousel(props) {
                 {props.carouselImages[props.currentIndex].description}
               </div>
               <div className="ButtonsBox">
-              <MyButton onClick={showPrevious}><img src={left} alt="<-" style={{height: "30px"}}/></MyButton>
+              <MyButton className="button-left" onClick={showPrevious}></MyButton>
               <div style={{fontSize: '40px', color: 'gray'}}>|</div>
-              <MyButton onClick={showNext}><img src={right} alt="->" style={{height: "30px"}}/></MyButton>
+              <MyButton className="button-right" onClick={showNext}></MyButton>
               </div>
             </div>
 
