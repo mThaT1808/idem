@@ -1,13 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-
-import logo from '../../media/images/logo1.png';
 import phoneLogo from '../../media/images/phoneLogo.png';
 import "./Head.css"
 import MyButton from "../UI/MyButton/MyButton";
 
 
+
 function Head() {
+    const navigate= useNavigate()
+    const redirectToJobForm = () => {
+        navigate("/jobForm");
+    }
     return (
     <div className="head">
         <div className="headLeft">
@@ -15,7 +19,7 @@ function Head() {
             <h2 className="heading">гросс маркет</h2>
         </div>
         <div className="pNumber">+7 (926) 433-14-16</div>
-        <MyButton className="hBtn">заполнить анкету</MyButton>
+        <MyButton onClick={redirectToJobForm} className="hBtn">заполнить анкету</MyButton>
         <img src={phoneLogo} alt="pLogo"  className="pLogo"/>
 
     </div>

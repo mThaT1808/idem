@@ -7,12 +7,17 @@ import {
 import './App.css';
 import Home from "./pages/HomePage";
 import Footer from "./components/UI/Footer/Footer"
+import JobForm from "./pages/JobForm";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/jobForm",
+    element: <JobForm />
   },
 ]);
 

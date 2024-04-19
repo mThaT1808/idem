@@ -1,0 +1,50 @@
+.jobFormHead {
+    background-color: #F5F5F5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headCase {
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.rightHead {
+    margin-right: 15px;
+    content: '';
+    background: url("/src/media/images/xcross.png");
+    background-size: contain;
+    width: 23px;
+    height: 24px;
+    display: inline-block;
+    cursor: pointer;
+}
+.greyLogo {
+    content: '';
+    background: url("/src/media/images/greyLogo.png");
+    background-size: contain;
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+.leftHead {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1440px) {
+    .headCase {
+        width: 690px;
+    }
+}
+@media (max-width: 768px) {
+    .headCase {
+        width: 90vw;
+    }
+}

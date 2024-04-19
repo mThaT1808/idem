@@ -1,0 +1,183 @@
+.jobFormBody {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    min-height: 550px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.jFormHeading {
+    font-size: 72px;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+.jobFormCase {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 60px;
+}
+.pgf {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+.pNumberCase {
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jobFormForm {
+    display: flex;
+    flex-direction: column;
+    
+}
+.jForm {
+    display: flex;
+    flex-direction: column;
+    
+}
+.fileInput {
+    
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: red;
+    
+}
+.fInputLabel {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    opacity: 1;
+    position: relative;
+    padding: 15px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+}
+.dragOn {
+    background-color: #FFDF31;
+}
+.jFselect {
+    width: 100%;
+    appearance: none;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    border: 0px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.jFselect:focus {
+    outline: 0px;
+}
+.jLabel {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+    gap: 15px;
+}
+.triangle {
+    content: '';
+    background: url("/src/media/images/down.png");
+    background-size: contain;
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+    position: absolute;
+    top: 33%;
+    right: 15px;
+    
+}
+.selectBox {
+    position: relative;
+}
+.input {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    border: 0px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.input:hover {
+    opacity: 0.8;
+}
+.tArea {
+    background-color: #F5F5F5;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 8px;
+    border: 0px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0s;
+}
+.jCheckBox {
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.jCheckBox+label{
+    display: inline-flex;
+    user-select: none;
+    
+    min-width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 2px solid #adb5bd;
+}
+.checkBox {
+    display: flex;
+    gap: 15px;
+}
+.lilBlocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.lilBlock {
+    display: flex;
+    flex-direction: column;
+}
+.SEX {
+    display: flex;
+    margin-top: 15px;
+    gap: 15px;
+}
+@media (max-width: 1440px) {
+    .jobFormBody{
+        width: 690px;
+    }
+    .jobFormCase {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .jobFormBody {
+        width: 90vw;
+    }
+    .lilBlocks {
+        grid-template-columns: 1fr;
+    }
+}
