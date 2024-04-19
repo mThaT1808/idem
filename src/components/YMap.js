@@ -1,4 +1,4 @@
-import "./styles.css";
+
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 export default function YMap() {
