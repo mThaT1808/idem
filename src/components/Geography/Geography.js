@@ -1,6 +1,7 @@
 import './Geography.css';
 import MyButton from '../UI/MyButton/MyButton'
 import { useState } from 'react';
+import YMap from '../YMap';
 
 
 export default function Geography() {
@@ -30,7 +31,7 @@ export default function Geography() {
           география
         </div>
         <div className="geoBody">
-
+          <YMap />
         </div>
         <div className="geoButtons">
           <MyButton onClick={SetLegalActive} className={'geoButton ' +`${legalActive}`}>юрлица</MyButton>
