@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import phoneLogo from '../../media/images/phoneLogo.png';
 import "./Head.css"
-import MyButton from "../UI/MyButton/MyButton";
+import MyButton from "../UI/my_button/MyButton";
 
 
 

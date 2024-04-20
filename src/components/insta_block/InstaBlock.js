@@ -1,5 +1,5 @@
 import './InstaBlock.css';
-import MyButton from '../UI/MyButton/MyButton';
+import MyButton from '../UI/my_button/MyButton';
 import { useState } from 'react';
 import GetInitInsta from '../../init_data/initInsta';
 import InstCard from '../UI/inst_card/InstCard';

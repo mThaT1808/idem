@@ -4,6 +4,8 @@ import "./Footer.css"
 
 
 function Footer() {
+
+
     return (
       <div className="footer">
         <div className="logoBlock">
@@ -21,7 +23,7 @@ function Footer() {
         </div>
         <div className="copyRight">
           <div>© Гросс маркет 2020</div>
-          <div className="privacy">Политика обработки персональных данных</div>
+          <div className="privacy" onClick={alert}>Политика обработки персональных данных</div>
         </div>
       </div>
     );

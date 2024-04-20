@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import './Carousel.css'
-import MyButton from "../UI/MyButton/MyButton";
+import MyButton from "../UI/my_button/MyButton.js";
 import ImageBox from "../UI/imageBox/ImageBox.js";
 
 

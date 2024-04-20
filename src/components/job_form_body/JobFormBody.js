@@ -67,17 +67,17 @@ function JobFormBody() {
         setErrors(_errors)
 
         if (typeof state.email !== "undefined") {
-            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+            var epattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     
-            if (!pattern.test(state.email)) {
+            if (!epattern.test(state.email)) {
               isValid = false;
               _errors.email = "поле заполнено не корректно";
             }
         }
         if (typeof state.birthday !== "undefined") {
-            var pattern = new RegExp("\d{1,2}/\d{1,2}/\d{4}");
+            var bpattern = new RegExp("\d{1,2}/\d{1,2}/\d{4}");
     
-            if (!pattern.test(state.birthday)) {
+            if (!bpattern.test(state.birthday)) {
               isValid = false;
               _errors.birthday = "поле заполнено не корректно";
             }
@@ -192,10 +192,10 @@ function JobFormBody() {
                                     ?'выберите или перетащите файл'
                                     :state.file}
 
-                            </label>
+                            </label >
                             <div>Тут была бы капча</div>
                             <div className='checkBox'>
-                                <MyInput id='jCheckBox' className='jCheckBox' type="checkbox" required/>
+                                <MyInput id='jCheckBox' className='jCheckBox' type="checkbox" required onChange={e =>console.log(e.target.checked)}/>
                                 <label htmlFor="jCheckBox"></label>
                                 <div>я подтверждаю согласие на обработку персональных данных и принимаю условия рассмотрения обращений *</div>
                             </div>

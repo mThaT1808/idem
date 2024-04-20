@@ -147,6 +147,9 @@
     transition: 0.3s;
     border: 2px solid #adb5bd;
 }
+.jCheckBox:checked+label{
+    background-color: black;
+}
 .checkBox {
     display: flex;
     gap: 15px;

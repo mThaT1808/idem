@@ -1,8 +1,6 @@
 import './Vacancies.css';
-import right from "../../media/images/right.png";
-import left from "../../media/images/left.png";
-import MyButton from '../UI/MyButton/MyButton';
-import VacancyCard from '../UI/vacancyCard/VacancyCard';
+import MyButton from '../UI/my_button/MyButton';
+import VacancyCard from '../UI/vacancy_card/VacancyCard';
 
 function Vacancies (props) {
 
@@ -15,7 +13,7 @@ function Vacancies (props) {
                 </div>
                 <div className="vacButtonsBox">
                     <MyButton className="button-left"></MyButton>
-                    <div style={{fontSize: '40px', color: 'gray'}}>|</div>
+                    <div style={{fontSize: '40px', color: 'gray'}}></div>
                     <MyButton className="button-right"></MyButton>
                 </div>
             </div>

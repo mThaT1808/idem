@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 * {
-  font-family: 'Euclid Circular B', sans-serif;
-  transition: 1.5s;
-  overflow-x: hidden;
-}
-* {
+    font-family: 'Euclid Circular B', sans-serif;
     margin: 0;
     padding: 0;
   }

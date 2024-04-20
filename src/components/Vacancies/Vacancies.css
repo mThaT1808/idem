@@ -35,7 +35,7 @@
     background-color: #FFFFFF;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .button-left::after {
     content: '';
