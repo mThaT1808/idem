@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Geography from "../components/geography/Geography.js";
-import Vacancies from "../components/Vacancies/Vacancies";
+import Vacancies from "../components/vacancies/Vacancies.js";
 import Carousel from "../components/carousel/Carousel";
 import Head from "../components/head/Head";
 import InstaBlock from "../components/insta_block/InstaBlock.js";

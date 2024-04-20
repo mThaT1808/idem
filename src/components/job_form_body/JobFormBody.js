@@ -58,15 +58,15 @@ function JobFormBody() {
         }
         if(!state.birthday) {
             isValid = false;
-            _errors.birthday = "Обязательное поле для ввода";;
+            _errors.birthday = "Обязательное поле для ввода";
         }
         if(state.phone.length<13) {
             isValid = false;
-            _errors.phone = "Обязательное поле для ввода";;
+            _errors.phone = "Обязательное поле для ввода";
         }
         setErrors(_errors)
 
-        if (typeof state.email !== "undefined") {
+        if (state.email != null) {
             var epattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     
             if (!epattern.test(state.email)) {
