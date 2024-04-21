@@ -8,6 +8,7 @@ import './App.css';
 import Home from "./pages/HomePage";
 import Footer from "./components/UI/Footer/Footer"
 import JobForm from "./pages/JobForm";
+import ThanksgivingPage from "./pages/ThanksgivingPage";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/jobForm",
     element: <JobForm />
+  },
+  {
+    path: "/watingYou",
+    element: <ThanksgivingPage />
   },
 ]);
 

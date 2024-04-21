@@ -62,7 +62,6 @@
         grid-template-columns: 1fr 1fr;
     }
     .textBox {
-        z-index: 10;
         height: 400px;
         width: 345px;
     }

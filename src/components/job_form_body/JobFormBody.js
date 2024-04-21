@@ -2,10 +2,13 @@ import { useState } from 'react';
 import './JobFormBody.css'
 import GetInitVacancies from '../../init_data/InitVacancies';
 import MyInput from '../UI/my_input/MyInput';
-
+import { useNavigate } from "react-router-dom";
+import { SmartCaptcha } from '@yandex/smart-captcha';
 
 function JobFormBody() {
+    const navigate = useNavigate()
     const vacancies = GetInitVacancies()
+    const [token, setToken] = useState(false);
     const [drag, setDrag] = useState('')
     const dragIn = () => {
         setDrag('dragOn')
@@ -64,24 +67,26 @@ function JobFormBody() {
             isValid = false;
             _errors.phone = "Обязательное поле для ввода";
         }
-        setErrors(_errors)
+        if(!token){isValid = false}
+        
 
-        if (state.email != null) {
+        if (state.email != "") {
             var epattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     
             if (!epattern.test(state.email)) {
-              isValid = false;
               _errors.email = "поле заполнено не корректно";
             }
         }
-        if (typeof state.birthday !== "undefined") {
-            var bpattern = new RegExp("\d{1,2}/\d{1,2}/\d{4}");
+        /*if (typeof state.birthday !== "undefined") {
+            var bpattern = new RegExp("[0-9]{2}/[0-9]{2}/[0-9]{4}");
     
             if (!bpattern.test(state.birthday)) {
               isValid = false;
               _errors.birthday = "поле заполнено не корректно";
             }
-        }
+        }*/
+
+        setErrors(_errors)
 
         return isValid;
     }
@@ -101,7 +106,9 @@ function JobFormBody() {
             resume: '',
             file: '',
             })
+            navigate("/watingYou")
         }
+        
 
     }
     const setFeemaleSex = () => {
@@ -193,7 +200,7 @@ function JobFormBody() {
                                     :state.file}
 
                             </label >
-                            <div>Тут была бы капча</div>
+                            <SmartCaptcha sitekey="ysc1_bcdwknLZ0tk2Hmx8k0ZHctvZNgpNu9UHYogcXTIo3de153c2" onSuccess={() => setToken(true)} />
                             <div className='checkBox'>
                                 <MyInput id='jCheckBox' className='jCheckBox' type="checkbox" required onChange={e =>console.log(e.target.checked)}/>
                                 <label htmlFor="jCheckBox"></label>

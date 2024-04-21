@@ -1,0 +1,50 @@
+.thanksgivingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thanksgivingGrid{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.thanksgivingContent h1 {
+    font-size: 72px;
+}
+.thanksgivingContent {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.smol {
+    border-left: 3px solid #FFDF31;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.thanksgivingPhone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media (max-width: 1440px) {
+    .thanksgivingGrid {
+        width: 690px;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .thanksgivingGrid {
+        width: 90vw;
+    }
+    .thanksgivingContent h1 {
+        font-size: 48px;
+    }
+}

@@ -2,7 +2,7 @@ import "./JobFormHead.css"
 import { useNavigate } from "react-router-dom";
 
 function JobFormHead() {
-    const navigate= useNavigate()
+    const navigate = useNavigate()
     const redirectToHome = () => {
         navigate("/");
     }

@@ -18,6 +18,7 @@ export default function YMap(props) {
           {
             props.coordinates.map((index) => 
             <Placemark 
+            key={Math.random()}
             geometry={index.coordinate}
             properties={{
               hintContent: logo,

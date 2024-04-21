@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Footer.css"
-
+import MyModal from "../my_modal/MyModal";
+import InitPrivatePolicy from "../../../init_data/privatePolicy";
 
 function Footer() {
-
+    const [modalActive, setModalActive] = useState('')
 
     return (
       <div className="footer">
@@ -23,8 +24,11 @@ function Footer() {
         </div>
         <div className="copyRight">
           <div>© Гросс маркет 2020</div>
-          <div className="privacy" onClick={alert}>Политика обработки персональных данных</div>
+          <div className="privacy" onClick={() => setModalActive('modalActive')}>Политика обработки персональных данных</div>
         </div>
+        <MyModal active={modalActive} heading={'Обработка данных'} setModalActive={setModalActive}>
+          <InitPrivatePolicy />
+        </MyModal>
       </div>
     );
   }

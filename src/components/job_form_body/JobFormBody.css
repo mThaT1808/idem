@@ -119,8 +119,7 @@
 }
 .tArea {
     background-color: #F5F5F5;
-    max-width: 100%;
-    min-width: 100%;
+    width: 100% !important;
     border-radius: 8px;
     border: 0px;
     padding: 10px;
