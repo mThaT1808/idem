@@ -70,21 +70,23 @@ function JobFormBody() {
         if(!token){isValid = false}
         
 
-        if (state.email != "") {
+        if (state.email != null) {
             var epattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
     
             if (!epattern.test(state.email)) {
               _errors.email = "поле заполнено не корректно";
             }
         }
-        /*if (typeof state.birthday !== "undefined") {
-            var bpattern = new RegExp("[0-9]{2}/[0-9]{2}/[0-9]{4}");
+
+        if (state.birthday != null) {
+            var dateReg = /^\d{2}([./-])\d{2}\1\d{4}$/
+            console.log(state.birthday.match(dateReg))
     
-            if (!bpattern.test(state.birthday)) {
+            if (state.birthday.match(dateReg) === null) {
               isValid = false;
               _errors.birthday = "поле заполнено не корректно";
             }
-        }*/
+        }
 
         setErrors(_errors)
 
@@ -202,7 +204,7 @@ function JobFormBody() {
                             </label >
                             <SmartCaptcha sitekey="ysc1_bcdwknLZ0tk2Hmx8k0ZHctvZNgpNu9UHYogcXTIo3de153c2" onSuccess={() => setToken(true)} />
                             <div className='checkBox'>
-                                <MyInput id='jCheckBox' className='jCheckBox' type="checkbox" required onChange={e =>console.log(e.target.checked)}/>
+                                <MyInput id='jCheckBox' className='jCheckBox' type="checkbox" required />
                                 <label htmlFor="jCheckBox"></label>
                                 <div>я подтверждаю согласие на обработку персональных данных и принимаю условия рассмотрения обращений *</div>
                             </div>
